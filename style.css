@@ -1,0 +1,255 @@
+/* =====================================
+   BASIC PAGE STYLING
+   ===================================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fb;
+    color: #222;
+    text-align: center;
+}
+
+
+/* =====================================
+   HEADER
+   ===================================== */
+
+header {
+    background-color: #173f5f;
+    color: white;
+    padding: 40px 20px;
+}
+
+header h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 18px;
+}
+
+
+/* =====================================
+   MAIN CONTENT
+   ===================================== */
+
+main {
+    width: 90%;
+    max-width: 1000px;
+    margin: 30px auto;
+}
+
+
+/* Animation cards */
+
+.animation-card {
+    background-color: white;
+    margin: 25px 0;
+    padding: 30px;
+    border-radius: 12px;
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.animation-card h2 {
+    margin-bottom: 10px;
+}
+
+.animation-card p {
+    margin-bottom: 25px;
+}
+
+
+/* =====================================
+   ANIMATION 1: BUTTON HOVER
+   ===================================== */
+
+/* Normal button */
+
+.hover-button {
+    padding: 12px 25px;
+
+    border: none;
+    border-radius: 8px;
+
+    background-color: #2196f3;
+    color: white;
+
+    font-size: 16px;
+    cursor: pointer;
+
+    /* Makes the animation smooth */
+    transition: transform 0.3s,
+                background-color 0.3s;
+}
+
+
+/* When mouse moves over button */
+
+.hover-button:hover {
+    background-color: #1565c0;
+
+    /* Makes button bigger */
+    transform: scale(1.1);
+}
+
+
+/* =====================================
+   ANIMATION 2: GROWING BOX
+   ===================================== */
+
+.grow-box {
+    width: 120px;
+    height: 120px;
+
+    margin: auto;
+
+    background-color: #4caf50;
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 10px;
+
+    /* Smooth growing effect */
+    transition: transform 0.5s;
+}
+
+
+/* Box grows when mouse is over it */
+
+.grow-box:hover {
+    transform: scale(1.4);
+}
+
+
+/* =====================================
+   ANIMATION 3: LOADING SPINNER
+   ===================================== */
+
+.spinner {
+    width: 60px;
+    height: 60px;
+
+    margin: auto;
+
+    border: 7px solid #ddd;
+    border-top: 7px solid #673ab7;
+
+    border-radius: 50%;
+
+    /* Run spin animation forever */
+    animation: spin 1s linear infinite;
+}
+
+
+/* Spinner animation */
+
+@keyframes spin {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
+
+/* =====================================
+   ANIMATION 4: BOUNCING BALL
+   ===================================== */
+
+.ball-container {
+    height: 180px;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+
+/* Ball */
+
+.ball {
+    width: 50px;
+    height: 50px;
+
+    background-color: #ff9800;
+
+    border-radius: 50%;
+
+    /* Run bounce animation forever */
+    animation: bounce 1s ease-in-out infinite;
+}
+
+
+/* Bouncing animation */
+
+@keyframes bounce {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-100px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =====================================
+   FOOTER
+   ===================================== */
+
+footer {
+    background-color: #173f5f;
+    color: white;
+
+    padding: 20px;
+
+    margin-top: 40px;
+}
+
+
+/* =====================================
+   RESPONSIVE DESIGN
+   ===================================== */
+
+/* For mobile phones */
+
+@media (max-width: 600px) {
+
+    header h1 {
+        font-size: 28px;
+    }
+
+    header p {
+        font-size: 16px;
+    }
+
+    .animation-card {
+        padding: 20px;
+    }
+
+    .animation-card h2 {
+        font-size: 20px;
+    }
+
+}
